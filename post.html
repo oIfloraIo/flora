@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시판 페이지</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h2>게시판 글쓰기</h2>
+    <form action="write.jsp" method="post">
+      <div class="form-group">
+        <label for="title">제목</label>
+        <input type="text" class="form-control" id="title" placeholder="제목 입력" name="title" maxlength="100" required="required"pattern=".{4,100}">
+      </div>
+      <div class="form-group">
+        <label for="content">내용</label>
+        <textarea class="form-control" rows="5"id="content" name="content" placeholder="내용 작성"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="writer">작성자</label>
+        <input type="password" class="form-control" id="writer" placeholder="작성자" name="writer">
+      </div>
+      <div>
+        <form action="page.html">
+          <input type="submit" value="등록">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
